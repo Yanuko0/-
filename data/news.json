@@ -1,0 +1,94 @@
+{
+  "contents": [
+    {
+      "pic": "../images/news/list/1.jpg",
+      "title": "「人生的波峰與波谷」玩法小提示",
+      "abstract": "旅行者們好呀~「人生的波峰與波谷」活動即將開放，幫助研究員進行測試，完成戰鬥挑戰換取獎勵吧！",
+      "date": "2023年10月22日",
+      "type": "資訊",
+      "class": "Info",
+      "url": "./news_articles/news1.html"
+    },
+    {
+      "pic": "../images/news/list/2.jpg",
+      "title": "「遠寄佳音」——《原神》楓丹篇原聲帶宣傳網頁正式上線",
+      "abstract": "音符點綴楓丹的旅程",
+      "date": "2023年10月20日",
+      "type": "資訊",
+      "class": "Info",
+      "url": "./news_articles/news2.html"
+    },
+    {
+      "pic": "../images/news/list/3.jpg",
+      "title": "劇情預告-「清泉之心」｜原神",
+      "abstract": "人們望向流水，嘆息時光匆匆流淌。",
+      "date": "2023年10月18日",
+      "type": "資訊",
+      "class": "Info",
+      "url": "./news_articles/news3.html"
+    },
+    {
+      "pic": "../images/news/list/4.jpg",
+      "title": "蒙德&璃月主題問答活動",
+      "abstract": "旅行者們好啊！最近在蒙德和璃月又發生了好多趣事呢！",
+      "date": "2023年10月18日",
+      "type": "活動",
+      "class": "Activity",
+      "url": "./news_articles/news4.html"
+    },
+    {
+      "pic": "../images/news/list/5.jpg",
+      "title": "拾枝雜談-「萊歐斯利：今時新規」｜原神",
+      "abstract": "誰也沒想過，那黃銅與鐵壁的古老要塞竟然還能夠迎來新的秩序。",
+      "date": "2023年10月17日",
+      "type": "資訊",
+      "class": "Info",
+      "url": "./news_articles/news5.html"
+    },
+    {
+      "pic": "../images/news/list/6.jpg",
+      "title": "角色展示-「萊歐斯利：即興發揮」｜原神",
+      "abstract": "處理違規行為的方法從來沒有什麼固定標準。",
+      "date": "2023年10月16日",
+      "type": "資訊",
+      "class": "Info",
+      "url": "./news_articles/news6.html"
+    },
+    {
+      "pic": "../images/news/list/7.jpg",
+      "title": "「星之歸還」系統維護說明",
+      "abstract": "親愛的旅行者:\n為了提供旅行者更好的遊戲體驗，開發團隊將於4.2版本更新並改善「星之歸還」系統。在4.2版本更新前，需要暫時關閉「星之歸還」系統進行維護。",
+      "date": "2023年10月16日",
+      "type": "公告",
+      "class": "Announcement",
+      "url": "./news_articles/news7.html"
+    },
+    {
+      "pic": "../images/news/list/8.jpg",
+      "title": "「向深水中的晨星」4.1版本活動快報第二期",
+      "abstract": "旅行者們好呀~一起來看看近期即將登場的活動吧!",
+      "date": "2023年10月12日",
+      "type": "資訊",
+      "class": "Info",
+      "url": "./news_articles/news8.html"
+    },
+    {
+      "pic": "../images/news/list/9.jpg",
+      "title": "4.1版本活動祈願公告第二期",
+      "abstract": "活動期間，旅行者可以在活動祈願中獲得更多角色與武器，組建強大的隊伍！",
+      "date": "2023年10月12日",
+      "type": "資訊",
+      "class": "Info",
+      "url": "./news_articles/news9.html"
+    },
+    {
+      "pic": "../images/news/list/10.jpg",
+      "title": "「機關轟鳴中」——《原神》新角色：萊歐斯利網頁活動正式上線。",
+      "abstract": "有些人和零件一樣，要多敲打幾下。",
+      "date": "2023年10月12日",
+      "type": "活動",
+      "class": "Activity",
+      "url": "./news_articles/news10.html"
+    }
+  ]
+}
