@@ -1,0 +1,646 @@
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* |                                                   第一頁                                                            | */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+/* 定義 .poster 容器的樣式 */
+.poster {
+    position: relative;
+/* 相對定位 */
+}
+
+
+/* 定義影片標籤的樣式 封面背景圖*/
+.poster video {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    /* 將影片元素設置為 block-level 元素，這將使其佔據整個容器的寬度。 */
+    object-fit: cover;
+}
+
+/* 定義 .letter 容器的樣式 畫面右上角信封*/
+.poster .letter {
+    position: absolute;
+    top: 76px;
+    right: 10px;
+    width: 183px;
+    height: 176px;
+}
+
+/* 定義 .posterBox 容器的樣式 多平台正式上線下方的連結位置*/
+.posterBox {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+/* 定義 .posterBox 中文字標題的樣式 多平台正式上線的字體跟位置*/
+ .posterBox span {
+    display: block;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(114,71,21,0.68), 0 0 10px rgba(114,71,21,0.68);
+    margin: 32px auto 27px;
+    /* 上邊距為32像素 auto，這使得左右邊距自動平均分配 下邊距為27像素 */
+}
+
+/* 定義播放按鈕外框的樣式 多平台正式上線上方 播放按鈕的外框*/
+.playButtonBorder {
+    width: 100%;
+    height: 76px;
+    background: url("../images/home/poster/playButtonBorder.png") no-repeat center center;
+    /* no-repeat，表示背景圖片不應該重複。即，它只會顯示一次，不會在背景上重複。
+    第一個center，表示背景圖片在水平方向上居中
+    第二個center，表示背景圖片在垂直方向上居中 */
+    position: relative;
+}
+
+/* 定義播放按鈕的樣式 播放按鈕的樣式 播放外面的框框*/
+.playButton {
+    width: 48px;
+    height: 48px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 調整元素的偏移 */
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    /* 圓形圓弧 */
+    border: 0;
+    /* 移除邊框 */
+    background-color: white;
+}
+
+/* 在播放按鈕上方加上播放圖示 */
+.playButton::before {
+    content: "";
+    /* 設置一個空內容。 
+    在使用 ::before 或 ::after 擬似元素時，必須使用 content 屬性。
+    即使你不希望在擬似元素中顯示實際內容，你仍然需要設置 content 屬性，
+    否則 CSS 規則可能會被忽略。*/
+    width: 28px;
+    height: 28px;
+    background-image: url("../images/home/poster/playButton.png");
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 滑鼠懸停時，播放按鈕的樣式變化 */
+.playButton:hover {
+    background-color: transparent;
+    /* 懸停時設置為透明 */
+}
+
+/* 在懸停時更改播放按鈕中的圖示位置 */
+.playButton:hover::before {
+    background-position: 0px -28px;
+    /* ::before 擬似元素的背景位置。這將將背景圖片向上移動 28 像素。
+    這樣的效果通常用於在懸停時改變元素或其擬似元素的外觀，
+    這裡是改變了 .playButton 的 ::before 擬似元素的背景位置，
+    可能用於創造一些動畫或視覺效果，使元素看起來更加互動。 */
+}
+
+/* 多平台正式上線 下方的容器 */
+/* 定義 .deviceArea 容器的樣式 */
+.deviceArea {
+    justify-content: center;
+    /* 子元素在主軸上（通常是水平方向）的對齊方式設置為居中 */
+}
+/*  */
+/* 定義 QR code 圖片的樣式 */
+.deviceArea .QRcode {
+    width: 180px;
+    height: 180px;
+    margin: 0 -10px 0 5px;
+    background: url("../images/home/download/QRcode.png") no-repeat center center;
+    transform: scale(0.75);
+} 
+
+/* 定義裝置圖片的樣式 */
+.deviceArea .devices {
+    display: flex;
+    flex-direction: column;
+    /* 垂直上到下排成一列 */
+}
+
+/* 定義裝置圖片的樣式 */
+.devices img {
+    margin: 6px 5px 1px 0;
+    /* 上邊距6 右邊距5 下邊距1 左邊距0 */
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* |                                                   第二頁 新聞                                                               | */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+/* 定義 .news 容器的樣式 */
+.news {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/home/news/news_background.jpg") no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    /* 主軸方向為垂直方向，使子元素按照列的方式排列。 */
+    align-items: center;
+    /* 子元素在交叉軸上（這裡是垂直軸）居中對齊 */
+    justify-content: center;
+    /* 主軸上（這裡是垂直方向）居中對齊。 */
+}
+
+/* 定義 .newsBox 容器的樣式 */
+.newsBox {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 定義新聞標題的樣式 */
+.news h1 {
+    font-size: 50px;
+    color: white;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* 在新聞標題前後加上裝飾線條 */
+.news h1::before {
+    content: '';
+    width: 385px;
+    height: 14px;
+    position: absolute;
+    top: 40%;
+    left: -420%;
+    background: url("../images/home/news/news_title.png") no-repeat left center/cover;
+}
+
+.news h1::after {
+    content: '';
+    width: 385px;
+    height: 14px;
+    position: absolute;
+    top: 40%;
+    right: -420px;
+    background: url("../images/home/news/news_title.png") no-repeat right center/cover;
+    transform: rotateY(180deg);
+    /* rotateY(180deg) 表示將元素繞著 Y 軸旋轉 180 度。 */
+}
+
+/* 定義新聞圖片容器的樣式 */
+.newsPics {
+    width: 640px;
+    height: 400px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* 定義新聞圖片選擇標籤的樣式 */
+.newsPics ul {
+    position: absolute;
+    bottom: 10px;
+    /* 底部相距 10 像素。 */
+    left: 50%;
+    /* 左側與其包含塊的左側相距 50%，這是一種水平居中的技巧。 */
+    transform: translate(-50%, 0);
+    /* 是一個平移變換，將元素在水平方向上向左移動 50% 的自身寬度，實現水平居中的效果。 */
+    display: flex;
+    flex-direction: row;
+    /* 主軸方向為水平方向 */
+    cursor: auto;
+    /* 標游標設置為默認（auto） */
+}
+
+/* 將ul的 li變成有點類似切換的圖片按鈕樣式 */
+.newsPics ul li {
+    width: 15px;
+    height: 15px;
+    list-style-position: inside;
+    /* 將列表項目符號（點）放置在列表項的內側。 */
+    color: rgba(255, 255, 255, 0);
+    border: 2.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    font-size: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    /* 點擊小手手 */
+}
+
+/* 定義選擇標籤標示為活動狀態的樣式 設置第一個為白色*/
+.activeLi {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+/* 定義新聞列表的樣式 */
+.newsList {
+    width: 640px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 定義新聞列表標題的樣式  最新兩個字的格子 */
+.newsList .newsListTitle {
+    width: 95%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #ffd49f;
+    position: relative;
+}
+
+/* 格字內的p 最新兩個字 */
+.newsList .newsListTitle p {
+    padding-left: 10px;
+    /* 左內邊距為 10 像素。這將在文本內容的左側添加一個 10px 的內邊距。 */
+}
+
+/* 最新下面那條分隔線 */
+.newsList .newsListTitle hr {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* 最新字體格子底下的線 最新字體下面 */
+.newsList .newsListTitle .newsListUnderline {
+    height: 3px;
+    width: 60px;
+    background-color: #ffba67;
+    position: absolute;
+    bottom: 0;
+}
+
+/* 定義新聞列表的樣式 */
+.newsList ul {
+    width: 95%;
+    /* 設置了 ul 元素的寬度為其包含塊寬度的 95%。
+    這樣的設置使得 ul 元素相對於其容器稍微縮小，留下一些邊緣空間。 */
+    list-style: none;
+    /* 移除ul黑點點 */
+    font-size: 17px;
+}
+
+.newsList ul li {
+    height: 50px;
+    /* 高度為 50 像素。 */
+    line-height: 50px;
+    /* 文字在垂直方向上置中，使其與父元素的高度一致。 */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    /* 添加一條 2 像素寬的底部邊框，顏色為白色並帶有 0.2 的透明度 */
+    position: relative;
+}
+
+/* 滑鼠懸停時變化新聞列表的樣式 */
+.newsList ul li:hover {
+    background-color: rgba(255, 230, 200, 0.1);
+}
+
+/* 最新下方每一篇文的字體超連結a */
+
+.newsList ul li a {
+    display: inline-block;
+    /* 將 a 元素設置為內聯塊級元素，
+    使其既具有內聯元素的特性（不換行），又具有塊級元素的特性（可設置寬度和高度）。 */
+    width: 100%;
+    text-decoration: none;
+    /* 移除文本的下劃線，這樣超鏈接就不會顯示下劃線。 */
+    text-align: left;
+    /* 將文本設置為左對齊，使文本在 a 元素中左對齊顯示 */
+    color: white;
+    padding-left: 5px;
+    /* 左側內邊距為5像素，提供一些空間，使文本不緊貼 a 元素的邊緣。 */
+}
+
+/* 超連結右側的span年月日 */
+.newsList ul li span {
+    position: absolute;
+    right: 0;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 15px;
+}
+
+/* 定義 "Load More News" 按鈕的樣式 */
+.loadNews {
+    width: 95%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    /* Flex 容器的主軸方向為水平方向，使子元素按照行的方式排列。 */
+    justify-content: end;
+    /* 主軸方向（水平方向）的對齊方式為末端對齊，將子元素推至容器的末端。 */
+    align-items: center;
+    /* 垂直方向）的對齊方式為居中對齊，使子元素在垂直方向上居中。 */
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 22px;
+    /* 設置文本的行高為 22 像素。 */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 加載更多的img +的圖 */
+.loadNews img {
+    height: 22px;
+    margin-right: 10px;
+}
+
+/* 滑鼠懸停時 "Load More News" 按鈕的樣式變化 */
+.loadNews:hover {
+    color: rgba(255, 212, 159, 0.6);
+}
+
+.loadNews:hover img {
+    background-color: rgba(255, 212, 159, 0.2);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* |                                                   第三區 城市部分                                                                | */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+/* 定義城市列表中每一項列表的樣式 */
+.city li {
+    box-sizing: border-box;
+    /* IE 盒子模型 元素的框模型。這個屬性的設置對於計算元素的寬度和高度非常重要。
+    使用 box-sizing: border-box; 時，元素寬度和高度包括了內容、邊框和內邊距。
+    可以使得在設定元素的寬度和高度時更加直觀，特別是在需要精確控制元素尺寸時，
+    避免因內容、邊框和內邊距的增加而使元素溢出 */
+    width: 100%;
+    height: 260px;
+    line-height: 260px;
+    text-align: center;
+    position: relative;
+    list-style-type: none;
+    /* 移除列表項目的點狀樣式。 */
+    overflow: hidden;
+    /* 當內容溢出時，隱藏溢出的部分。 */
+    transform-style: preserve-3d;
+    /* 保持子元素的 3D 變換 */
+    perspective: 500px;
+    /* 設置透視效果，影響子元素的 3D 變換 這個值表示透視點到 Z=0 平面的距離為500像素*/
+}
+
+/* 定義城市背景的樣式 */
+.cityBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: no-repeat center/cover;
+    /* center 表示將背景圖片置中，cover 表示保持比例並確保整個元素被覆蓋。 */
+    transition: 0.3s linear all;
+    /* 添加過渡效果，使屬性的變化在0.3秒內以線性的方式進行。all 表示應用過渡效果的所有屬性。 */
+}
+
+/* 定義城市名稱的樣式 */
+.city li a {
+    text-decoration: none;
+}
+
+/* 定義城市名稱文字的樣式 */
+.city li p {
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 40px;
+}
+
+/* 滑鼠懸停時城市名稱的樣式變化 */
+.city li:not(:nth-child(6)):hover {
+    /* :not(:nth-child(6)) 表示選擇不是第六個子元素的所有 li 元素。
+    :nth-child(6) 用於選擇第六個子元素，而 :not() 用於排除這個選擇。 */
+    border: 5px solid white;
+    transition: 0.2s linear all;
+    /* 添加過渡效果，使樣式的變化在0.2秒內以線性的方式進行。all 表示應用過渡效果的所有屬性 */
+}
+
+/* 滑鼠懸停時城市圖片和底線的樣式變化 人物以及城市下面的底線樣式 */
+.city li:hover .characterImg,
+.city li:hover .underline {
+    opacity: 1;
+    /* 影響人物出現的透明度 */
+    transition: 0.2s linear all;
+}
+
+/* 滑鼠懸停時城市背景的樣式變化 */
+.city li:not(:nth-child(6)):hover .cityBg {
+    /* :not(:nth-child(6)) 表示選擇不是第六個子元素的所有 li 元素。 的city背景 */
+    transform: translateZ(100px);
+    /* Z 軸平移 100px。這是一個3D變換效果，使 .cityBg 在3D空間中產生 Z 方向的位移。 */
+    transition: 0.3s linear all;
+    /* 添加過渡效果，使樣式的變化在0.3秒內以線性的方式進行。all 表示應用過渡效果的所有屬性。 */
+}
+
+/* 定義 "Upcoming" 標籤的樣式 定義敬請期待的元素格子 */
+.upcoming::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* 滑鼠懸停時 "Upcoming" 標籤的樣式變化 */
+.city li:not(:nth-child(6))::before {
+    /* 定義除了第六個以外的格子 */
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: block;
+    /* 將虛擬元素設置為塊級元素。 */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* 虛擬元素的背景顏色為半透明的黑色。 */
+}
+
+/* 滑鼠懸停時城市名稱的樣式變化 */
+.city li:not(.upcoming):hover::before {
+    /* 定義除了第六個以外的格子 */
+    background-color: rgba(0, 0, 0, 0.15);
+    /* 更透明 */
+    transition: 0.2s linear all;
+}
+
+/*  定義城市名稱前面添加圖案添加img 城鎮底下的圖標圖案 */
+.city li p:not(.upcoming):after {
+    content: "";
+    background-image: url("../images/home/cityBg/cityFontBg.png");
+    filter: brightness(2);
+    /* 應用亮度濾鏡，使背景圖片變亮。 */
+    width: 132px;
+    height: 132px;
+    display: inline;
+    /* 設置虛擬元素為行內元素 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 擬元素的位置設置為相對於父元素的中心。 */
+    transform: translate(-50%, -50%);
+    /* 使虛擬元素在自身的中心點位於父元素的中心。 */
+}
+
+
+/* 定義城市圖片的樣式  城鎮裡面顯示的角色圖案*/
+.characterImg {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    /* 元素的頂部位置設置為 0 */
+    margin-left: -100px;
+    /* 側邊距為 -100px。這將使元素向左移動 100 像素。 */
+    opacity: 0;
+    /* 設置元素的透明度為 0。這使元素完全透明，即不可見。 */
+    transition: 0.2s linear all;
+}
+
+/* 定義城市名稱底線的樣式  城市下面的底線樣式*/
+.underline {
+    position: absolute;
+    z-index: 2;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.2s linear all;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* |                                                   右側的追蹤我們視窗                                                   | */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+/* 定義聯絡框 定義聯絡框右側的樣式 */
+.contactBox {
+    position: fixed;
+    top: 38.5%;
+    right: 0;
+    /* 將元素的頂部位置設置為視窗垂直中心，右側位置設置為視窗右邊緣。 */
+    transform: translate(0, -50%);
+    /* 對元素應用垂直方向的平移，使其垂直居中。
+    這裡的 translate(0, -50%) 會使元素向上移動自身高度的一半。 */
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    /* 讓他一開始隱藏起來不會有點擊按鈕出現 */
+    transition: 0.4s all linear;
+}
+
+/* 定義聯絡框右側 追蹤我們聯絡框的文字樣式 */
+.contactBox p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    /* 水平對齊方式為居中 */
+    margin: 18px auto;
+    /* 設置上下外邊距為 18 像素，左右外邊距為自動 
+    這將使元素在水平方向上居中。*/
+}
+
+.contactBox .contactList {
+    list-style: none;
+    /* 消除小圓點 */
+    width: 178px;
+    padding: 10px 2px;
+    /* 10px：上下內邊距為10像素。
+    2px：左右內邊距為2像素。 */
+}
+
+
+/* 定義聯絡方式列表項目的樣式 */
+.contactBox .contactList li {
+    width: 100%;
+    height: 44px;
+     /* li 元素的高度為44像素 */
+    line-height: 44px;
+    /* 設置 li 元素的行高為44像素。這將使文字在垂直方向上居中顯示。 */
+    font-size: 16px;
+}
+/* 滑鼠懸停時聯絡方式列表項目的樣式變化 */
+.contactBox .contactList li:hover {
+    background-color: #333;
+    transition: 0.1s all linear;
+}
+
+/* 定義聯絡方式列表項目中的連結樣式 */
+.contactBox .contactList li a {
+    width: 100%;
+    text-decoration: none;
+    /* 消除超連結底線樣式 */
+    display: flex;
+    flex-direction: row;
+    /* Flexbox 的方向設置為水平（橫向）排列 */
+    justify-content: space-between;
+    /* 將內容在主軸上（水平方向）分散排列，使其位於容器的兩側，中間則有空間。 */
+    text-align: left;
+    /* a 元素內的水平對齊方式為靠左 */
+}
+
+/* 定義聯絡方式列表項目中的文字樣式 */
+.contactBox .contactList li a span {
+    color: #333;
+    font-size: 25px;
+    padding-left: 21px;
+    /* 左側填充為21像素。這將在文字左側添加一定的間距。 */
+}
+
+/* 滑鼠懸停時聯絡方式列表項目中的文字樣式變化 字體顏色變化 */
+.contactBox .contactList li:hover a span {
+    color: #f1ad5f;
+    transition: 0.1s all linear;
+}
+
+/* 特殊樣式設定：第五項目的文字樣式 */
+.contactList li:nth-child(5) a span {
+    color: #333;
+    font-size: 20px;
+}
+
+/* 定義聯絡方式列表項目中的文字內容樣式 */
+.contactBox .contactList li a .contactText {
+    font-size: 19px; 
+    padding-right: 21px;
+    /* .contactText 元素的右側與文字之間添加 21 像素的間距。 */
+}
+
+/* 定義聯絡按鈕的樣式  點開 收起來的>按鈕樣式*/
+.contactBtn {
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    width: 30px;
+    height: 52px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #333;
+}
+
+/* 定義聯絡按鈕圖片的樣式 */
+.contactBtnImg {
+    margin: 0 auto;
+    /* 上下外邊距為 0，左右外邊距為自動。這將使元素在水平方向上居中。 */
+    vertical-align: middle;
+    /* 垂直對齊方式為中間。這通常用於垂直居中內聯元素。 */
+    width: 12px;
+    height: 18px;
+    transition: 0.2s all linear;
+    transform: rotateZ('0deg');
+    /* Z 軸為軸心進行旋轉，初始角度為 0 度。 */
+}

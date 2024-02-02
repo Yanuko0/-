@@ -1,0 +1,117 @@
+/* 整體 Footer 樣式 */
+footer {
+    width: 100%;
+    background-color: rgb(26, 26, 26); 
+    /* 背景顏色設定為深灰色 */
+  }
+  
+  /* Footer 上部分樣式 上方的區塊 */
+  .footerTop {
+    height: 50px; 
+    /* 直方向上將佔據 50px  */
+    line-height: 50px;  
+    /* 設定行高為 50 像素，使文字居中 */
+    margin-left: 300px; 
+    /* 設定左邊距為 300 像素 */
+  }
+  
+  /* Footer 上部分中的連結樣式 */
+  .footerTop a {
+    text-decoration: none; 
+    /* 移除連結的下劃線 */
+  }
+  
+  /* Footer 上部分中的連結中的文字在滑鼠懸停時的樣式 */
+  .footerTop a span:hover {
+    color: rgb(240, 240, 240); 
+    /* 在滑鼠懸停時改變文字顏色為淺灰色 */
+  }
+  
+  /* Footer 上部分中的文字間距 */
+  .footerTop span {
+    margin-right: 20px; 
+    /* 設定右邊距為 20 像素 */
+  }
+  
+  /* Footer 下部分樣式 原神 隱私權等等包含底下的區塊*/
+  .footerBottom {
+    background-color: black; 
+    /* 背景顏色設定為黑色 */
+    overflow: hidden;
+     /* 元素溢出時隱藏 */
+  }
+  
+  /* Footer 下部分中的p段落樣式 */
+  .footerBottom p {
+    color: rgb(136, 136, 136); 
+    /* 設定文字顏色為深灰色 */
+    text-align: center; 
+    /* 文字置中對齊 */
+    font-size: 12px; 
+    /* 設定文字大小為 12 像素 */
+    line-height: 20px; 
+    /* 設定行高為 20 像素 */
+  }
+  
+  /* Footer 下部分中的圖片樣式 */
+  .footerBottom img {
+    display: block;
+    /* 這使得圖片將在其上下兩側顯示空間，而不會與其他元素共享同一行。 */
+    height: 67px;
+    margin: 15px auto; 
+    /* 設定邊距，使圖片置中 */
+    /* 15px 表示上下邊距為 15px，而 auto 表示左右邊距自動調整，以使圖片水平置中於其父元素 */
+  }
+  
+  /* 隱私權 使用協議等 文字區塊樣式 */
+  .companyText {
+    text-align: center; 
+    /* 文字置中對齊 */
+  }
+  
+  /* 公司文字區塊中的連結樣式 */
+  .companyText a {
+    text-decoration: none; 
+    /* 移除連結的下劃線 */
+    color: rgb(136, 136, 136); 
+    /* 設定文字顏色為深灰色 */
+    margin-right: 15px; 
+    /* 設定右邊距為 15 像素 */
+    font-size: 12px;
+     /* 設定文字大小為 12 像素 */
+  }
+  
+  /* 公司文字區塊中的連結在滑鼠懸停時的樣式 */
+  .companyText a:hover {
+    color: rgb(201, 201, 201);
+     /* 在滑鼠懸停時改變文字顏色為淺灰色 */
+  }
+  
+  /* 代理商框圖標樣式 */
+  .agentBox {
+    display: flex;
+    flex-direction: row;
+    /* 主軸方向為水平方向 水平排列*/
+    justify-content: center; 
+    /* 在水平方向上置中對齊 */
+  }
+  
+  /* 代理商框中的圖片樣式 */
+  .agentBox img {
+    display: inline-block;
+    /* 設置圖片為行內塊元素。這使得圖片既具有塊元素的特性（有高度和寬度），
+    又具有行內元素的特性（不佔據整行，可以與其他行內元素共享同一行）。 */
+    margin: 15px 3px; 
+    /* 設定邊距15px 表示上下邊距為 15px，而 3px 表示左右邊距為 3px */
+    transform: translateX(-10px);
+     /* 在水平方向上向左平移 10 像素 */
+  }
+  
+  /* Footer 最下部分中的版權文字樣式 */
+  .footerBottom .copyright {
+    color: white; 
+    /* 設定文字顏色為白色 */
+    margin-bottom: 30px; 
+    /* 設定下邊距為 30 像素 */
+  }
+  

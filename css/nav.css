@@ -1,0 +1,548 @@
+/* 清除基本樣式 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 啟用flex布局 */
+.flexRow {
+    display: flex;   
+    /* //彈性盒子 */
+    flex-direction: row;
+    /* 主軸變為水平 行方向 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+/* 窗口最小寬度 */
+body {
+    min-width: 1400px;
+}
+
+.mask {
+    position: absolute;
+    z-index: 998;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+}
+
+
+/*-------------------------------------------------------------------------------------*/
+/* ------------登入框設計-------登入框設計----登入框設計----登入框設計----登入框設計------- */
+/*-------------------------------------------------------------------------------------*/
+
+/* 登入框 */
+.login {
+    width: 450px;
+    position: fixed;
+    /* 將登入框設置為固定位置，即相對於瀏覽器視窗固定位置，不隨頁面滾動而移動 */
+    top: 50%;
+    left: 50%;
+    /* 設置登入框的上邊緣和左邊緣距離視窗頂部和左邊各為視窗高度和寬度的50%。
+    這樣設置的目的是將登入框置於視窗的正中央。 */
+    transform: translate(-50%, -50%);
+    /* 使用 translate 轉換函式，將登入框向左和向上移動，以實現居中對齊。
+    -50% 表示移動的距離為元素自身寬度和高度的一半。 */
+    background-color: white;
+    border-radius: 10px;
+    visibility: hidden;
+    /* 最初將登入框設置為隱藏，這樣它不會一開始就顯示在頁面上。 */
+}
+/* 登入關閉按鈕 */
+.loginCancle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* 將關閉按鈕的上邊緣距離其包含元素（可能是 .login 登入框）的上邊緣 10 像素。
+    同樣，右邊緣距離右邊緣 10 像素。這樣的設置將按鈕置於登入框的右上角。 */
+    cursor: pointer;
+    /* 當鼠標指針懸停在按鈕上時，將鼠標樣式設置為手形，以指示該元素可以進行點擊操作。 */
+}
+
+.loginCancle:hover {
+    content: url("../images/nav/loginCancleHover.png");
+    /* 當 .loginCancle 元素處於懸停狀態時，改變其內容（content）為指定的圖片
+    。這個圖片的URL為 "../images/nav/loginCancleHover.png"。 */
+}
+
+/* 登入框的logo */
+.loginLogo {
+    width: 200px;
+    position: relative;
+    top: 15px;
+    /* 將logo相對於其正常位置向下移動 15 像素。 */
+    left: 50%;
+    /* 設置logo的左邊緣相對於其包含元素的左邊緣水平居中。 */
+    transform: translate(-50%, 0);
+    /* 進行額外的水平平移，以確保logo在水平方向上仍然保持居中。
+    -50% 表示向左平移元素寬度的一半。 */
+    margin-top: 20px;
+    /* 在logo的上邊緣添加額外的 20 像素的外邊距，使其與上方的元素保持一定的距離。 */
+}
+
+.login p {
+    margin: 30px 0;
+    /* 設置段落元素的上下外邊距為 30 像素，左右外邊距為 0。 */
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    /* 將文本的字體加粗。 */
+    text-align: center;
+    /* 將文本水平居中對齊。 */
+    opacity: 0.85;
+    /* 設置文本的透明度為 0.85，即 85% 不透明度。 */
+}
+
+.login input,
+.login button {
+    box-sizing: border-box;
+    /* 設置框模型的盒子尺寸為 border-box。
+    border-box 盒子模型表示元素的寬度和高度包括內邊距（padding）和邊框（border），
+    而不包括外邊距（margin）。這樣設置的目的是讓元素的寬度和高度的
+    設定包括內邊距和邊框，使得尺寸的控制更直觀和一致。 */
+}
+
+/* 輸入框input */
+.login input {
+    width: 85%;
+    height: 48px;
+    margin-top: 20px;
+    /* 在輸入框的上方添加 20 像素的外邊距。 */
+    padding: 0px 15px;
+    /* 設置輸入框的內邊距，上下為 0 像素，左右為 15 像素。 */
+    display: inline-block;
+    /* 將輸入框設置為行內塊元素，這樣它會在水平方向上保持彈性並同時具有塊元素的特性。 */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 使用 translate 轉換函式，進行水平和垂直方向的平移，以確保輸入框在其包含元素的中央。 */
+    border: 1px solid lightgray;
+    outline: none;
+    /* 隱藏輸入框的預設輪廓效果。 */
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: rgb(250, 250, 250);
+    /* 設置輸入框的背景色為淺灰色 */
+}
+
+/* ::placeholder  是一個用於選擇輸入框占位符文本的偽元素。*/
+::placeholder {
+    color: rgb(165, 165, 165);
+    /* 這樣的設置使得在輸入框中未輸入任何內容時，占位符文本將以指定的灰色顏色顯示。
+    這有助於提供視覺上的提示，讓使用者知道他們應該在輸入框中輸入什麼類型的內容。 */
+}
+
+
+.login input:focus {
+    border: 1px solid rgba(189, 147, 112, 0.849);
+    /* .login input:focus 就是針對當輸入框處於被聚焦狀態時的樣式設置。
+    這樣的設置通常用來提供視覺上的反饋，讓使用者知道他們當前所處的輸入框。
+    就是當點擊 可以用鍵盤輸入時 就會變聚焦狀態 邊框變色 */
+}
+
+/* 登入按鈕 */
+.login button {
+    display: block;
+    border: none;
+    /* 移除邊框 */
+    border-radius: 8px;
+    width: 85%;
+    height: 48px;
+    margin-top: 50px;
+    /* 在按鈕的上方添加 50 像素的外邊距。 */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 使用 translate 轉換函式，進行水平和垂直方向的平移，以確保按鈕在其包含元素的中央。 */
+    color: rgb(185, 185, 185);
+    font-size: 18px;
+    background-color: rgb(230, 230, 230);
+    cursor: not-allowed;
+    /* 設置鼠標指針為禁止樣式，表示按鈕當前不可用。 */
+}
+
+/* 遇到問題以及立即註冊設計 */
+.help {
+    width: 85%;
+    color: rgba(189, 147, 112, 0.849);
+    margin-top: -5px;
+    /* 在 .help 元素的上方添加 -5 像素的外邊距，將其位置上調。 */
+    position: relative;
+    left: 50%;
+    /* 設置 .help 元素相對於其包含元素的位置，將其水平居中。 */
+    transform: translate(-50%, 0);
+    /* 使用 translate 轉換函式，對 .help 元素進行水平平移，以確保它在其包含元素的中央。 */
+    display: flex;
+    flex-direction: row;
+    /* 設置彈性容器的主軸方向為水平方向（行） */
+    justify-content: space-between;
+    /* 在彈性容器中，使內容在主軸上均勻分佈，兩端對齊。 */
+}
+
+.help span:hover {
+    color: rgb(221, 187, 159);
+    cursor: pointer;
+    /* 滑鼠滑上遇到問題以及立即註冊時 改變顏色 以及 變成點擊小手手 */
+}
+
+.more {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* 設置彈性容器的主軸方向為水平方向（行）。這意味著子元素將水平排列。 */
+    justify-content: center;
+    /* 在彈性容器中，使內容在主軸上居中對齊。
+    具體來說，它將子元素放置在主軸上的中央位置，創造水平居中的效果。 */
+}
+
+/* 更多登錄方式的區塊以及設計 */
+
+/* 線 */
+.more div {
+    width: 85%;
+    /* 設置 div 元素的寬度為其包含元素寬度的 85%。 */
+    height: 1px;
+    /* 設置 div 元素的高度為 1 像素，創建一條水平的分隔線。 */
+    border-top: 2px solid rgba(224, 224, 224, 0.8);
+    /* 在 div 元素的頂部添加一條 2 像素寬的實線，顏色為 RGBA 色碼 (224, 224, 224, 0.8)。
+    這條線的效果是創造一個分隔線，通常用來區分不同區塊的內容。 */
+    position: absolute;
+    top: 50%;
+}
+
+/* 線中的文字 */
+.more p {
+    width: 25%;
+    color: rgb(200, 200, 200);
+    font-size: 14px;
+    background: rgb(255, 255, 255);
+}
+
+/* 更多登入方式的圖標 */
+.loginIcon {
+    display: flex;
+    flex-direction: row;
+    /* 主軸變為水平 */
+    justify-content: center;
+    /* 主軸置中 */
+    margin: 0 0 40px 0;
+    /* 設置 .loginIcon 元素的外邊距。這裡使用的是簡寫形式，
+    分別設置上、右、下、左方向的外邊距。在這裡，底邊距（40px）被設置為 40 像素。
+    往上移一些 */
+}
+
+.loginIcon img {
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    /* 設置 img 元素的右外邊距為 25 像素。這個外邊距將在圖片的右側添加一定的間距。 */
+    cursor: pointer;
+}
+/*--------------------------------------------------------------*/
+/*-------------------點擊下載遊戲後的下載遊戲框-------------------*/
+/*--------------------------------------------------------------*/
+
+.download {
+    display: flex;
+    flex-direction: column;
+    /* 設置彈性容器的主軸方向為垂直方向（列）。這表示子元素將垂直排列。 */
+    visibility: hidden;
+    /* 元素隱藏，但該元素的佔據的空間仍然保留，就好像它仍然在頁面上可見一樣。 */
+}
+
+/* 下載遊戲框的外觀box */
+
+.downloadBox {
+    width: 796px;
+    height: 353px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../images/nav/downloadBg.png") no-repeat center;
+    display: flex;
+    flex-direction: column;
+      /* 設置彈性容器的主軸方向為垂直方向（列）。這表示子元素將垂直排列。 */
+    justify-content: center;
+    /* 在彈性容器中，使內容在主軸上垂直居中對齊。 */
+    align-items: center;
+    /* 在彈性容器中，使內容在交叉軸上水平居中對齊。 */
+}
+
+/* 遊戲框的關閉叉叉按鈕樣式 */
+.cancle {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-5px, -50px);
+    cursor: pointer;
+}
+
+/* 下載的區塊 包然QRcode&下載連結 */
+.downloadArea {
+    display: flex;
+    flex-direction: row;
+    /* 設置彈性容器的主軸方向為水平方向（行）。這表示子元素將水平排列。 */
+    justify-content: center;
+    /* 在彈性容器中，使內容在主軸上水平居中對齊。 */
+    align-items: center;
+    /* 在彈性容器中，使內容在交叉軸上垂直居中對齊。 */
+    transform: scale(0.8);
+    /* 使用 transform 屬性對 .downloadArea 
+    元素進行縮放。scale(0.8) 將元素在水平和垂直方向上縮小為原來的 80%。 */
+}
+
+/* 下載區塊最下面的底部 */
+
+.downloadBottom {
+    display: flex;
+    flex-direction: row;
+    /* 設置彈性容器的主軸方向為水平方向（行）。
+    這表示 .downloadBottom 元素內的子元素將水平排列。 */
+    margin-top: 35px;
+    /* appstore上面增加外邊距35px */
+}
+
+/* 下載區塊裡面的img右側增加8px的外邊距 */
+.downloadArea img {
+    margin-right: 8px;
+}
+
+/* 下載區塊的超連結 */
+.downloadArea a {
+    text-decoration: none;
+    /* 禁用底下那一行的底線效果 */
+    margin-right: 8px;
+    /* a元素也增加右側外邊距8px */
+}
+
+.downloadBottom a {
+    margin-right: 12px;
+    /* 右外邊距為 12 像素 */
+}
+
+/* 下載遊戲的字樣 */
+.downloadText {
+    color: black;
+    font-weight: bold;
+    /* 粗體 */
+    font-size: 32px;
+    margin-bottom: 25px;
+    /* 底部外邊距為 25 像素 */
+    position: relative;
+}
+
+/* 兩側的星星 */
+.downloadText img {
+    width: 19px;
+    height: auto;
+}
+
+.downloadBox span {
+    margin: 0 50px;
+    /* .downloadBox 元素內的 span 元素的外邊距。這裡的 0 表示上下外邊距為 0，
+    而 50px 表示左右外邊距為 50 像素。這會在每個 span 元素的左右側添加一定的間距。 */
+}
+
+/*------------------------------------------------------------*/
+/*-----------------------最上方的導覽列------------------------*/
+/*------------------------------------------------------------*/
+
+/* 有使用到z-index */
+ nav {
+    /* 用fixed實現stick效果 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 66px;
+    color: #fff;
+    background-color: rgba(17, 17, 17, 0.75);
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35); 
+} 
+
+/* 音量圖標以及原神圖區塊 */
+.logoBox {
+    width: 317px;
+    height: 105px;
+    /* 啟用定位 */
+     position: relative;
+} 
+
+/* 原神的logo */
+.logo {
+    position: absolute;
+    left: 30px;
+}
+
+/* 音量開關按鈕 */
+.musicButton {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 70px;
+    /* 左側邊緣的距離為 70 像素 */
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* 有使用到z-index */
+/* 登入以及下載遊戲的box */
+.itemBox {
+    width: 600px;
+    height: 66px;
+    line-height: 66px;
+    /* 設置 .itemBox 元素的行高（line-height）為 66 像素。
+    這會使內部文本在垂直方向上居中對齊。 */
+    z-index: 1;
+    position: relative;
+    /* .itemBox 元素的定位方式設置為相對定位。
+    這意味著 .itemBox 將相對於其正常位置進行移動，而不影響其他元素的佈局。 */
+}
+
+.navMark {
+    width: 28px;
+    border: 2.8px solid rgb(69, 182, 226);
+    /* 設置 .navMark 元素的邊框為 2.8 像素的實線，顏色為 rgb(69, 182, 226)。 */
+    transition: 0.15s all linear;
+    /* 設置 .navMark 元素的過渡效果，持續時間為 0.15 秒，
+    應用於所有屬性，過渡動畫以線性方式進行。 */
+    position: relative;
+    top: 0;
+    /* 將 .navMark 元素相對於其包含元素的上邊緣偏移量設置為 0，即置於包含元素的上部。 */
+}
+
+
+/*----------------*/
+/* 其他頁面的導覽列 */
+/*----------------*/
+
+/* .newsNavMark {
+    position: absolute;
+    left: 62px;
+} */
+
+/* .charNavMark {
+    position: absolute;
+    left: 124px;
+} */
+
+/* .dataNavMark {
+    position: absolute;
+    left: 186px;
+} */
+
+/* 樣式畫 首頁 新聞 角色 的區域 */
+.items {
+    height: 66px;
+    display: flex;
+    /* 啟用 .items 元素的 Flexbox 布局，使其成為一個 Flex 容器。 */
+    flex-direction: row;
+    /* 設置 Flex 容器的主軸方向為水平方向（行）。這表示 .items 元素的子元素將水平排列。 */
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 定義 首頁 新聞 角色 的區域 的a超連結樣式 */
+.itemBox a {
+    margin-right: 30px;
+    /* 右外邊距30px */
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.7;
+    /* 透明度 */
+}
+
+/* 滑鼠放上時 改為不透明 加陰影效果 */
+.itemBox a:hover {
+    opacity: 1;
+    text-shadow: 0px 0px 15px rgb(22, 138, 184), 
+                 0px 0px 15px rgb(22, 138, 184),
+                 0px 0px 15px rgb(22, 138, 184),
+                 0px 0px 15px rgb(22, 138, 184);
+}
+
+.itemBox .active {
+    opacity: 1;
+    text-shadow: 0px 0px 15px rgb(22, 138, 184), 
+                 0px 0px 15px rgb(22, 138, 184),
+                 0px 0px 15px rgb(22, 138, 184),
+                 0px 0px 15px rgb(22, 138, 184);
+}
+
+/* .active 是一個 CSS 類別選擇器，通常用於選擇具有特定樣式或狀態的元素。
+這個類別通常與JavaScript或者使用者的交互相關聯，
+以在某個事件（比如點擊、應答等）後動態地添加或移除。
+例如，當使用者點擊一個導航菜單中的某個項目時，JavaScript 
+可能會將 .active 類別添加到被選擇的元素上，以便標記它是當前選擇的項目。
+然後，透過 CSS，可以對具有 .active 類別的元素應用特定的樣式，以使其在視覺上突出顯示。
+例如，上述的 .itemBox .active CSS 選擇器表示選擇具有 .active 
+類別並且位於 .itemBox 元素之內的元素。這樣的設計通常用於強調當前選擇或處於活動狀態的元素。 */
+
+/* 登入跟下載遊戲的box */
+.playBox {
+    margin-left: auto;
+    /* 這一行 CSS 規則將 .playBox 元素的左外邊距設置為 auto。
+    在這個上下文中，auto 的含義是使 .playBox 元素在其左側盡可能地擴展，
+    將其推至其容器的右側。 */
+}
+
+.playBox div {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.playBox div:hover {
+    opacity: 1;
+}
+
+/* 登入右側的頭像img */
+.loginImg {
+    width: 27px;
+    height: 27px;
+    margin: 0 20px;
+    opacity: 0.8;
+}
+
+/* 下載遊戲按鈕 */
+.downloadButton {
+    cursor: pointer;
+}
+
+/* .itemBox .dataList {
+    cursor: pointer;
+} */
+
+/* .itemBox .dataList ul {
+    width: 200px;
+    text-shadow: none;
+    list-style: none;
+    background-color: rgba(17, 17, 17, 0.9);
+    transform: translateX(-15px);
+    display: none;
+} */
+
+/* .itemBox .dataList ul li {
+    padding-left: 15px;
+} */
+
+/* .itemBox .dataList ul li:hover {
+    background-color: rgba(110, 110, 110, 0.3);
+} */
+
+/* .itemBox .dataList:hover ul {
+    display: block;
+} */

@@ -1,0 +1,54 @@
+/* // 定義自定義字體 */
+@font-face {
+  font-family: "iconfont"; /* Project id 4310368 */
+  src: url('../images/font_icon/iconfont.woff2?t=1698757500034') format('woff2'),
+       url('../images/font_icon/iconfont.woff?t=1698757500034') format('woff'),
+       url('../images/font_icon/iconfont.ttf?t=1698757500034') format('truetype');
+}
+
+/* // Icon 字體樣式 */ 
+.iconfont {
+  font-family: "iconfont" !important;
+  /* // 使用先前定義的 "iconfont" 字體 !important 表示此樣式規則優先權高於其他相同屬性的規則。 */
+  font-size: 32px; 
+  /* // 設定字體大小為 32 像素 */
+  font-style: normal; 
+  /* // 設定字體風格為正常 */
+  color: rgb(153, 153, 153); 
+  /* // 設定圖示的顏色為深灰色 */
+  -webkit-font-smoothing: antialiased; 
+  /* // 提高在 WebKit（例如 Chrome、Safari）中的字體平滑效果
+  antialiased 的意思是使用反鋸齒（antialiasing）技術，這樣可以使字體的邊緣看起來更加平滑 */
+  -moz-osx-font-smoothing: grayscale; 
+  /* // 提高在 macOS 中的字體平滑效果 
+  提高在 macOS 中使用的 Gecko 引擎的瀏覽器（例如 Firefox）的字體平滑效果。
+  grayscale 的意思是將字體渲染成灰階，這也有助於使字體邊緣平滑。*/
+}
+
+
+/* ::before 擴展元素。::before 用於在元素的內容之前插入生成的內容。  
+允許你在不修改 HTML 結構的情況下添加一些視覺效果。*/
+
+.icon-Youtube-fill:before {
+  content: "\e883";
+}
+
+.icon-facebook:before {
+  content: "\e8e7";
+}
+
+.icon-instagram:before {
+  content: "\e6bb";
+}
+
+.icon-reddit:before {
+  content: "\e8a1";
+}
+
+.icon-discord:before {
+  content: "\ebf8";
+}
+
+.icon-tuite-f:before {
+  content: "\e7ea";
+}
