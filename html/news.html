@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>《原神》 - 前往未知的冒險旅程</title>
+        <link rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/iconfont.css">
+        <link rel="stylesheet" href="../css/news.css">
+        <script src="../js/news.js" defer></script>
+        <script src="../js/nav.js" defer></script>
+      </head>
+      
+<body>
+    <div class="mask"></div>
+
+    <nav class="flexRow">
+        <div class="flexRow logoBox">
+            <img src="../images/nav/paused.png" alt="paused" class="musicButton">
+            <img src="../images/nav/logo.png" alt="GenshinLogo" class="logo">
+        </div>
+        <div class="itemBox">
+            <div class="navMark newsNavMark"></div>
+            <div class="items">
+                <a href="./home.html">首頁</a>
+                <a href="./news.html">新聞</a>
+                <a href="./char.html">角色</a>
+            </div>
+        </div>
+        <div class="flexRow playBox">
+            <div class="flexRow loginButton">
+                <span>登入</span>
+                <img src="../images/nav/login.png" alt="login" class="loginImg">
+            </div>
+            <img src="../images/nav/download.png" alt="download" class="downloadButton">
+        </div>
+
+        <div class="login">
+            <img src="../images/nav/loginCancle.png" alt="loginCancle.png" class="loginCancle">
+            <img src="../images/nav/loginLogo.png" alt="loginLogo.png" class="loginLogo">
+            <p>帳號登入</p>
+            <input type="text" placeholder="使用者名稱/電子信箱">
+            <input type="password" placeholder="密碼">
+            <button>登入</button>
+            <div class="help">
+                <span>遇到問題</span>
+                <span>立即註冊</span>
+            </div>
+            <div class="more">
+                <div></div>
+                <p>更多登入方式</p>
+            </div>
+            <div class="loginIcon">
+                <img src="../images/nav/googleIcon.png" alt="googleIcon">
+                <img src="../images/nav/iosIcon.png" alt="iosIcon">
+                <img src="../images/nav/fbIcon.png" alt="fbIcon">
+                <img src="../images/nav/twitterIcon.png" alt="twitterIcon">
+            </div>
+        </div>
+
+        <div class="download">
+            <div class="downloadBox">
+                <img src="../images/nav/cancle.png" alt="cancle" class="cancle">
+                <div class="downloadText">
+                    <img src="../images/nav/star.png" alt="star">
+                    <span>下載遊戲</span>
+                    <img src="../images/nav/star.png" alt="star">
+                </div>
+                <div class="downloadArea">
+                    <img src="../images/home/download/QRcode.png" alt="QRcode"></img>
+                    <div>
+                        <div>
+                            <a href="https://www.playstation.com/zh-hant-tw/games/genshin-impact/" target="_blank">
+                                <img src="../images/home/download/ps4.png">
+                            </a>
+                            <a href="./home.html">
+                                <img src="../images/home/download/windows.png">
+                            </a>
+                        </div>
+                        <div class="downloadBottom">
+                            <a href="https://apps.apple.com/app/id1517783697" target="_blank">
+                                <img src="../images/home/download/ios.png">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact" target="_blank">
+                                <img src="../images/home/download/android.png">
+                            </a>
+                            <a href="https://www.epicgames.com/store/p/genshin-impact" target="_blank">
+                                <img src="../images/home/download/epic.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio src="" autoplay="false" loop="true"></audio>
+    </nav>
+    
+    <div class="container">
+        <div class="poster">
+          <a href="./news_articles/news5.html" class="card">
+            <div class="imgBox"><img src="../images/news/poster/news1.jpg" alt="news1"></div>
+            <p>拾枝雜談-「萊歐斯利：今時新規」｜原神</p>
+            <span class="abstract">誰也沒想過，那黃銅與鐵壁的古老要塞竟然還能夠迎來新的秩序。</span>
+            <p class="date">10月17日</p>
+            <span class="type">資訊</span>
+          </a>
+          <a href="./news_articles/news6.html" class="card">
+            <div class="imgBox"><img src="../images/news/poster/news2.jpg" alt="news2"></div>
+            <p>角色展示-「萊歐斯利：即興發揮」｜原神</p>
+            <span class="abstract">處理違規行為的方法從來沒有什麼固定標準。</span>
+            <p class="date">10月16日</p>
+            <span class="type">資訊</span>
+          </a>
+          <a href="./news_articles/news9.html" class="card">
+            <div class="imgBox"><img src="../images/news/poster/news3.jpg" alt="news3"></div>
+            <p>萊歐斯利——「理論上來講，完全不認識我的人會比較幸福。」</p>
+            <span class="abstract">旅行者們好呀！今天為大家介紹的角色是萊歐斯利。</span>
+            <p class="date">10月11日</p>
+            <span class="type">資訊</span>
+          </a>
+        </div>
+        <div class="newsBox">
+            <ul class="classificationList">
+              <li><button class="newsBoxBtn activeBtn">最新</button></li>
+              <li><button class="newsBoxBtn">資訊</button></li>
+              <li><button class="newsBoxBtn">公告</button></li>
+              <li><button class="newsBoxBtn">活動</button></li>
+            </ul>
+            <ul class="articleList"></ul>
+            <button class="load">加載更多</button>
+          </div>
+        </div>
+
+        <button class="topBtn"><img src="../images/news/topBtn.png" alt="pic"></button>
+
+        <footer>
+            <div class="footerTop">
+                <a href="https://hoyo.link/98k1BYAd" target="_blank"><span class="iconfont icon-facebook"></span></a>
+                <a href="https://hoyo.link/97k1BRAd" target="_blank"><span class="iconfont icon-tuite-f"></span></a>
+                <a href="https://hoyo.link/b7k1BCAd" target="_blank"><span class="iconfont icon-Youtube-fill"></span></a>
+                <a href="https://hoyo.link/59k1BaAd" target="_blank"><span class="iconfont icon-instagram"></span></a>
+                <a href="https://hoyo.link/5502BRAd" target="_blank"><span class="iconfont icon-discord"></span></a>
+                <a href="https://hoyo.link/59k1BbAd" target="_blank"><span class="iconfont icon-reddit"></span></a>
+            </div>
+            <div class="footerBottom">
+                <img src="../images/footer/genshin_logo.png" alt="pic">
+                <div class="companyText">
+                    <a href="https://genshin.hoyoverse.com/zh-tw/company/privacy">隱私權政策</a>
+                    <a href="http://localhost:8080/html/home.html">使用者協議</a>
+                    <a href="http://localhost:8080/html/home.html">公司簡介</a>
+                    <a href="http://localhost:8080/html/home.html">聯絡我們</a>
+                </div>
+                <div class="agentBox">
+                    <img src="../images/footer/agent_logo.png" alt="pic">
+                    <img src="../images/footer/strict.png" alt="pic">
+                </div>
+                <p>本遊戲為免費使用，遊戲內另提供購買虛擬貨幣、物品等付費服務。請注意遊戲時間，避免沉迷。本遊戲部份情節涉及性、暴力。</p>
+                <p>"PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony
+                    Interactive Entertainment Inc.
+                <p>
+                <p>Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks
+                    and/or registered trademarks of Epic Games. All other trademarks are the property of their respective
+                    owners.</p>
+                <a href="https://www.hoyoverse.com/?utm_source=genshin&utm_medium=footer"><img
+                        src="../images/footer/mihoyo_logo.png" alt="pic"></a>
+                <p class="copyright">Copyright © COGNOSPHERE. All Rights Reserved.</p>
+            </div>
+          </footer>
+</body>
+</html>

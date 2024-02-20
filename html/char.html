@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《原神》 - 前往未知的冒險旅程</title>
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/char.css">
+    <link rel="icon" href="../images/favicon.ico">
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/char.js" defer></script>
+</head>
+<body>
+    <div class="mask"></div>
+
+    <nav class="flexRow">
+        <div class="flexRow logoBox">
+            <img src="../images/nav/paused.png" alt="paused" class="musicButton">
+            <img src="../images/nav/logo.png" alt="GenshinLogo" class="logo">
+        </div>
+        <div class="itemBox">
+            <div class="navMark charNavMark"></div>
+            <div class="items">
+                <a href="./home.html">首頁</a>
+                <a href="./news.html">新聞</a>
+                <a href="./char.html" class="active">角色</a>
+                
+            </div>
+        </div>
+        <div class="flexRow playBox">
+            <div class="flexRow loginButton">
+                <span>登入</span>
+                <img src="../images/nav/login.png" alt="login" class="loginImg">
+            </div>
+            <img src="../images/nav/download.png" alt="download" class="downloadButton">
+        </div>
+        <div class="login">
+            <img src="../images/nav/loginCancle.png" alt="loginCancle.png" class="loginCancle">
+            <img src="../images/nav/loginLogo.png" alt="loginLogo.png" class="loginLogo">
+            <p>帳號登入</p>
+            <input type="text" placeholder="使用者名稱/電子信箱">
+            <input type="password" placeholder="密碼">
+            <button>登入</button>
+            <div class="help">
+                <span>遇到問題</span>
+                <span>立即註冊</span>
+            </div>
+            <div class="more">
+                <div></div>
+                <p>更多登入方式</p>
+            </div>
+            <div class="loginIcon">
+                <img src="../images/nav/googleIcon.png" alt="googleIcon">
+                <img src="../images/nav/iosIcon.png" alt="iosIcon">
+                <img src="../images/nav/fbIcon.png" alt="fbIcon">
+                <img src="../images/nav/twitterIcon.png" alt="twitterIcon">
+            </div>
+        </div>
+        <div class="download">
+            <div class="downloadBox">
+                <img src="../images/nav/cancle.png" alt="cancle" class="cancle">
+                <div class="downloadText">
+                    <img src="../images/nav/star.png" alt="star">
+                    <span>下載遊戲</span>
+                    <img src="../images/nav/star.png" alt="star">
+                </div>
+                <div class="downloadArea">
+                    <img src="../images/home/download/QRcode.png" alt="QRcode"></img>
+                    <div>
+                        <div>
+                            <a href="https://www.playstation.com/zh-hant-tw/games/genshin-impact/" target="_blank">
+                                <img src="../images/home/download/ps4.png">
+                            </a>
+                            <a href="./home.html">
+                                <img src="../images/home/download/windows.png">
+                            </a>
+                        </div>
+                        <div class="downloadBottom">
+                            <a href="https://apps.apple.com/app/id1517783697" target="_blank">
+                                <img src="../images/home/download/ios.png">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact"
+                                target="_blank">
+                                <img src="../images/home/download/android.png">
+                            </a>
+                            <a href="https://www.epicgames.com/store/p/genshin-impact" target="_blank">
+                                <img src="../images/home/download/epic.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio src="" autoplay="false" loop="true"></audio>
+    </nav>
+
+    <div class="container">
+        <div class="city1 cityBgActive">
+            <ul class="charList">
+                <li class="charActive">
+                    <img src="../images/char/city1/char1.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">琴</p>
+                        <div class="charCV">CV: 齋藤千和</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            身為西風騎士團的代理團長，琴一直忠於職守，為人們帶來安寧。雖然並非天賦異稟，但經過刻苦訓練，如今的她已然能夠獨當一面。當風魔龍的威脅開始臨近，這位可靠的代理團長早已做好了準備，誓要守護蒙德。
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city1/char2.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">安柏</p>
+                        <div class="charCV">CV: 石見舞菜香</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            活潑率直的少女，是蒙德城中唯一的偵察騎士。擅長使用風之翼的安柏，連續三年蟬聯蒙德城的「飛行冠軍」。<br>
+                            作為西風騎士團的新星，今天的安柏依然活躍在第一線。
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city1/char3.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">麗莎</p>
+                        <div class="charCV">CV: 田中理惠</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            她是鍾情於睡眠的知性魔女。<br>
+                            作為西風騎士團圖書館的管理員，聰明的麗莎總能以最有效的方式將遇到的問題統統解決。<br>  
+                            雖然看似慵懶，但處變不驚的她似乎早已將一切盡數掌控。
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city1/char4.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">凱亞</p>
+                        <div class="charCV">CV: 鳥海浩輔</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            在西風騎士團裡，凱亞是代理團長最信任的副手。凡是交託於他的任務，總能得到解決。<br>
+                            在蒙德城中，風趣幽默的他同樣深受人們的喜愛，然而這位談吐不凡的騎士隱約有著什麼不為人知的秘密。
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city1/char5.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">芭芭拉</p>
+                        <div class="charCV">CV: 鬼頭明里</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            既是西風教會祈禮牧師，又是蒙德城的閃耀偶像。<br>
+                            對於習慣了傳統吟遊詩人的蒙德來說，「偶像」是還習慣不了的新鮮事物。但在蒙德，人人都愛芭芭拉。<br>                           
+                            這就是自由之都的自由精神——對大家投來的喜愛，芭芭拉是這樣滿懷感激地總結的。
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city1/char6.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">迪盧克</p>
+                        <div class="charCV">CV: 小野賢章</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            身為蒙德城第一富豪，風度翩翩的迪盧克總是以完美的貴公子形象示人。<br>
+                            然而他真實的一面，是秉承堅定信念的戰士，他那「不惜一切守護蒙德」的意志如火焰般熾熱，令他能以恐怖的攻勢，毫不留情地將一切敵人無情擊潰。<br>                           
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city1/char7.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">雷澤</p>
+                        <div class="charCV">CV: 內山昂輝</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            在蒙德坊間的傳聞裡，有人說他是被狼收養的棄嬰，有人說他是狼靈的化身…<br>
+                            利爪與蒼雷在飛馳，狼永遠與荒野為伴。<br>              
+                            時至今日，狼少年仍憑藉他野獸般的直覺，在林間與狼群一起奔獵。
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="charSelect">
+                <img src="../images/char/left_btn.png" alt="" class="charLeftBtn">
+                <div class="charSelectBox">
+                    <ul class="charSelectList">
+                        <li class="charCard CardActive">
+                            <img src="../images/char/city1/minChar1.png" alt="pic">
+                            <p>琴</p>
+                        </li>
+                        <li class="charCard"> 
+                            <img src="../images/char/city1/minChar2.png" alt="pic">
+                            <p>安柏</p>       
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city1/minChar3.png" alt="pic">
+                            <p>麗莎</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city1/minChar4.png" alt="pic">
+                            <p>凱亞</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city1/minChar5.png" alt="pic">
+                            <p>芭芭拉</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city1/minChar6.png" alt="pic">
+                            <p>迪盧克</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city1/minChar7.png" alt="pic">
+                            <p>雷澤</p>
+                        </li>
+                    </ul>
+                </div>
+                <img src="../images/char/left_btn.png" alt="" class="charRightBtn">
+            </div>
+        </div>
+        <div class="city2">
+            <ul class="charList">
+                <li class="charActive">
+                    <img src="../images/char/city2/char1.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">魈</p>
+                        <div class="charCV">CV: 松岡禎丞</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            守護璃月港的「三眼五顯仙人」之一，妙稱「護法夜叉大將」。<br>
+                            雖然外表看起來是一個少年人，但一些有關他的傳說，已在古卷中流傳千年。<br>
+                            對望舒客棧中一道名為「杏仁豆腐」的菜頗為喜愛。<br>             
+                            究其原因，是因為「杏仁豆腐」的味道，與他曾經吞噬過的「美夢」十分相似。
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city2/char2.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">北斗</p>
+                        <div class="charCV">CV: 小清水亞美</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            「南十字」船隊頭領，在璃月有著相當聲望。<br>
+                            有人說他能開山闢海，有人說他善舉劍引雷，還有人說，連恐怖的冥海巨獸都不是北斗的一合之敵。<br>
+                            外人也許會把這些話當作誇張的玩笑，但那些曾與北斗同航的人卻會說——「世上若真有什麼冥海巨獸，那北斗一定能將它劈作兩截。」
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city2/char3.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">凝光</p>
+                        <div class="charCV">CV: 大原さやか</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            坐擁空中宮殿，有著大量傳言的璃月權貴，臉上總是掛著優雅神秘的笑容。<br>
+                            作為「璃月七星」中的天權星，她不僅象徵著權力與律法，也代表著財富與才智。<br>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city2/char4.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">香菱</p>
+                        <div class="charCV">CV: 小澤亞李</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            「萬民堂」的新任大廚兼跑堂，對料理之道極具熱情，最拿手的是麻辣菜餚。<br>
+                            年紀尚輕，但廚藝精湛，在吃虎岩的老饕之中頗有名氣。<br>
+                            如果她要請你進行新品試吃，大可放心品嘗，絕不會辜負你的期待，真的。
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city2/char5.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">行秋</p>
+                        <div class="charCV">CV: 皆川純子</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            璃月港飛雲商會的二少爺行秋自幼便以勤奮好學、待人禮貌聞名。<br>
+                            不過，即使是如此文雅的少年人，也有著動若脫兔的一面。<br>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city2/char6.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">重雲</p>
+                        <div class="charCV">CV: 斉藤壮馬</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            以璃月為中心，四處進行驅邪活動的雲遊方士。作為驅邪世家繼承人，他自幼便有過人的絕技。然而，這種絕技並非學自師門，而是與生俱來的異能——「純陽之體」。                         
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city2/char7.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">七七</p>
+                        <div class="charCV">CV: 田村ゆかり</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            藥廬「不卜廬」的採藥姑娘兼學徒。<br>
+                            因「仙緣」而擁有不死之身，行動時需要自己對自己下敕令。<br>              
+                            七七的記憶力非常差，為了確保日常生活的順利，她隨身攜帶著一本筆記，寫有各種各樣的注意事項。<br>
+                            但在最不巧的那些日子裡，她連「要看筆記」這件事都會忘記……
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="charSelect">
+                <img src="../images/char/left_btn.png" alt="" class="charLeftBtn">
+                <div class="charSelectBox">
+                    <ul class="charSelectList">
+                        <li class="charCard CardActive">
+                            <img src="../images/char/city2/minChar1.png" alt="pic">
+                            <p>魈</p>
+                        </li>
+                        <li class="charCard"> 
+                            <img src="../images/char/city2/minChar2.png" alt="pic">
+                            <p>北斗</p>       
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city2/minChar3.png" alt="pic">
+                            <p>凝光</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city2/minChar4.png" alt="pic">
+                            <p>香菱</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city2/minChar5.png" alt="pic">
+                            <p>行秋</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city2/minChar6.png" alt="pic">
+                            <p>重雲</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city2/minChar7.png" alt="pic">
+                            <p>七七</p>
+                        </li>
+                    </ul>
+                </div>
+                <img src="../images/char/left_btn.png" alt="" class="charRightBtn">
+            </div>
+        </div>
+        <div class="city3">
+            <ul class="charList">
+                <li class="charActive">
+                    <img src="../images/char/city3/char1.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">神里綾華</p>
+                        <div class="charCV">CV: 早見沙織</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            稻妻「社奉行」神里家的大小姐。端莊文雅，聰慧堅韌。<br>                 
+                            待人接物真誠又得體，深受稻妻民眾愛戴，貴有「白鷺公主」之名。<br>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city3/char2.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">楓原萬葉</p>
+                        <div class="charCV">CV: 島崎信長</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            稻妻出身的浪人武士。為人謙和，個性溫順。<br>
+                            年輕瀟灑的外表下埋藏著許多往事。看似隨性，心中卻有獨屬於自己的行事準則。<br>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city3/char3.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">宵宮</p>
+                        <div class="charCV">CV: 植田佳奈</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            才華橫溢的煙花工匠，「長野原煙花店」的現任店主，被譽為「夏祭的女王」。<br>                
+                            熱情似火的少女。未泯的童心與匠人的執著在她身上交織出了奇妙的焰色反應。<br>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city3/char4.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">早柚</p>
+                        <div class="charCV">CV: 洲崎綾</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            早柚——隸屬於秘密組織「終末番」的特別忍者，對睡眠和長高有著異乎常人的追求。<br>          
+                            掌握一切可用於逃跑、隱蔽的忍術，以此為自己創造偷懶睡覺的機會。<br>       
+                            如此神奇的手段，或許會有意想不到的用途。
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city3/char5.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">雷電將軍</p>
+                        <div class="charCV">CV: 沢城みゆき</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            雷電將軍——此世最殊勝威怖的雷霆化身，稻妻幕府的最高主宰。<br> 
+                            挾威權之鳴雷，逐永恆之孤道的寂滅者。<br>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city3/char6.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">九條裟羅</p>
+                        <div class="charCV">CV: 瀬戸麻沙美</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            天領奉行的將領。行如風、言如誓，是位魄力過人的女性。<br>
+                            她有著「神的篤信者」之名，將全部忠心都奉獻給了雷電將軍。<br> 
+                            將軍所追求的「永恆」，也是她願意為之而戰的信念。
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city3/char7.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">珊瑚宮心海</p>
+                        <div class="charCV">CV: 三森すずこ</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            心海是海祇島的「現人神巫女」，也就是現任海祇島最高領袖。<br>
+                            她通讀兵法、擅長謀略，在軍事上有著獨特見解，也能將內政、外交等工作處理得井井有條。<br>              
+                            不過，這位人們眼中深不可測的領導者，似乎也有不為人知的一面…
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="charSelect">
+                <img src="../images/char/left_btn.png" alt="" class="charLeftBtn">
+                <div class="charSelectBox">
+                    <ul class="charSelectList">
+                        <li class="charCard CardActive">
+                            <img src="../images/char/city3/minChar1.png" alt="pic">
+                            <p>魈</p>
+                        </li>
+                        <li class="charCard"> 
+                            <img src="../images/char/city3/minChar2.png" alt="pic">
+                            <p>北斗</p>       
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city3/minChar3.png" alt="pic">
+                            <p>凝光</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city3/minChar4.png" alt="pic">
+                            <p>香菱</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city3/minChar5.png" alt="pic">
+                            <p>行秋</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city3/minChar6.png" alt="pic">
+                            <p>重雲</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city3/minChar7.png" alt="pic">
+                            <p>七七</p>
+                        </li>
+                    </ul>
+                </div>
+                <img src="../images/char/left_btn.png" alt="" class="charRightBtn">
+            </div>
+        </div>
+        <div class="city4">
+            <ul class="charList">
+                <li class="charActive">
+                    <img src="../images/char/city4/char1.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">提納里</p>
+                        <div class="charCV">CV: 小林沙苗</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            道成林的巡林官，畢業於阿彌利多學院的植物學學者。每天都過著巡查雨林、保護生態、教訓笨蛋的充實生活。<br>                 
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city4/char2.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">柯萊</p>
+                        <div class="charCV">CV: 前川涼子</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            見習巡林員，師從提納里。學術方面較同齡人起步稍晚，目前正在努力補習各種知識。<br>
+                            她將性格的另一面深深掩藏在陽光善良的表像之下。<br>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city4/char3.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">多莉</p>
+                        <div class="charCV">CV: 金田朋子</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            多莉是活躍在須彌的百貨商人，最喜歡閃亮亮的摩拉。<br>                
+                            能靠著精湛話術將手裡那些許多奇特又神秘的道具賣出高價。<br>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city4/char4.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">賽諾</p>
+                        <div class="charCV">CV: 入野自由</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            教令院的大風紀官，所有風紀官們的首領。擁有的獨特幽默感令人印象深刻。<br>          
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city4/char5.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">坎蒂絲</p>
+                        <div class="charCV">CV: 柚木涼香</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            阿如村的守護者，為人溫柔和善。在她的守護下，幾乎沒人能夠危害阿如村。<br> 
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city4/char6.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">妮露</p>
+                        <div class="charCV">CV: 金元寿子</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            「祖拜爾劇場」的明星演員，舞姿娉婷，如睡蓮初綻，一塵不染。<br>
+                            但她絕非高傲清冷之人，即便只是匆匆的旅者，也會對她純潔質樸的笑容過目不忘。<br> 
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city4/char7.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">納西妲</p>
+                        <div class="charCV">CV: 田村ゆかり</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            「小吉祥草王」深居於淨善宮內，向來不受重視，也很少被人提及。<br>
+                            她身負重任，哪怕目睹漆黑，經歷孤獨，也不曾停下腳步。<br>              
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="charSelect">
+                <img src="../images/char/left_btn.png" alt="" class="charLeftBtn">
+                <div class="charSelectBox">
+                    <ul class="charSelectList">
+                        <li class="charCard CardActive">
+                            <img src="../images/char/city4/minChar1.png" alt="pic">
+                            <p>提納里</p>
+                        </li>
+                        <li class="charCard"> 
+                            <img src="../images/char/city4/minChar2.png" alt="pic">
+                            <p>柯萊</p>       
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city4/minChar3.png" alt="pic">
+                            <p>多莉</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city4/minChar4.png" alt="pic">
+                            <p>賽諾</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city4/minChar5.png" alt="pic">
+                            <p>坎蒂絲</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city4/minChar6.png" alt="pic">
+                            <p>妮露</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city4/minChar7.png" alt="pic">
+                            <p>納西妲</p>
+                        </li>
+                    </ul>
+                </div>
+                <img src="../images/char/left_btn.png" alt="" class="charRightBtn">
+            </div>
+        </div>
+        <div class="city5">
+            <ul class="charList">
+                <li class="charActive">
+                    <img src="../images/char/city5/char1.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">林尼</p>
+                        <div class="charCV">CV: 下野紘</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            聞名楓丹的天才魔術師，以精妙的手法和言語牽動著觀眾的心。伶牙俐齒、演技精湛，心思如貓一樣難以猜透。<br>                 
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city5/char2.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">琳妮特</p>
+                        <div class="charCV">CV: 篠原侑</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            總是藏在陰影中的魔術助手，自稱「多功能魔術助理機關」。寡言少語，罕有表情，行動如貓一樣難以預料。<br>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city5/char3.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">菲米尼</p>
+                        <div class="charCV">CV: 土岐隼一</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            不善言談的少年，精於潛水之道，內心就如他愛不釋手的童話故事那般純真。<br>                
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city5/char4.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">那維萊特</p>
+                        <div class="charCV">CV: 神谷浩史</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            楓丹的最高審判官，看起來難以親近，或許是天性使然，或者是為了掩蓋秘密。<br>          
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city5/char5.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">萊歐斯利</p>
+                        <div class="charCV">CV: 小野大輔</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            梅洛彼得堡的管理人，榮獲楓丹最高榮譽市民稱號「公爵」。處世低調，沉穩可靠。<br> 
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/char/city5/char6.png" alt="pic" class="charImg">
+                    <div class="charText">
+                        <p class="charName">夏洛蒂</p>
+                        <div class="charCV">CV: 和氣あず未</div>
+                        <div class="charIntro">
+                            <img src="../images/char/intro_bg.png" alt="pic" class="introBg">
+                            「祖拜爾劇場」的明星演員，舞充滿活力的《蒸汽鳥報》記者，每時每刻都在為「真相」而奔走。姿娉婷，如睡蓮初綻，一塵不染。<br>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="charSelect">
+                <div class="charSelectBox">
+                    <ul class="charSelectList">
+                        <li class="charCard CardActive">
+                            <img src="../images/char/city5/minChar1.png" alt="pic">
+                            <p>林尼</p>
+                        </li>
+                        <li class="charCard"> 
+                            <img src="../images/char/city5/minChar2.png" alt="pic">
+                            <p>琳妮特</p>       
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city5/minChar3.png" alt="pic">
+                            <p>菲米尼</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city5/minChar4.png" alt="pic">
+                            <p>那維萊特</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city5/minChar5.png" alt="pic">
+                            <p>萊歐斯利</p>
+                        </li>
+                        <li class="charCard">
+                            <img src="../images/char/city5/minChar6.png" alt="pic">
+                            <p>夏洛蒂</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="backgroundBox">
+            <div class="blackBox"></div>
+            <div class="whiteBox"></div>
+            <div class="citiesLine"></div>
+            <ul class="cities">
+                <li class="cityActive">蒙德城</li>
+                <li>璃月港</li>
+                <li>稻妻城</li>
+                <li>須彌城</li>
+                <li>楓丹廷</li>
+                <li style="cursor: default;">敬請期待</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerTop">
+            <a href="https://hoyo.link/98k1BYAd" target="_blank"><span class="iconfont icon-facebook"></span></a>
+            <a href="https://hoyo.link/97k1BRAd" target="_blank"><span class="iconfont icon-tuite-f"></span></a>
+            <a href="https://hoyo.link/b7k1BCAd" target="_blank"><span class="iconfont icon-Youtube-fill"></span></a>
+            <a href="https://hoyo.link/59k1BaAd" target="_blank"><span class="iconfont icon-instagram"></span></a>
+            <a href="https://hoyo.link/5502BRAd" target="_blank"><span class="iconfont icon-discord"></span></a>
+            <a href="https://hoyo.link/59k1BbAd" target="_blank"><span class="iconfont icon-reddit"></span></a>
+        </div>
+        <div class="footerBottom">
+            <img src="../images/footer/genshin_logo.png" alt="pic">
+            <div class="companyText">
+                <a href="https://genshin.hoyoverse.com/zh-tw/company/privacy">隱私權政策</a>
+                <a href="http://localhost:8080/html/home.html">使用者協議</a>
+                <a href="http://localhost:8080/html/home.html">公司簡介</a>
+                <a href="http://localhost:8080/html/home.html">聯絡我們</a>
+            </div>
+            <div class="agentBox">
+                <img src="../images/footer/agent_logo.png" alt="pic">
+                <img src="../images/footer/strict.png" alt="pic">
+            </div>
+            <p>本遊戲為免費使用，遊戲內另提供購買虛擬貨幣、物品等付費服務。請注意遊戲時間，避免沉迷。本遊戲部份情節涉及性、暴力。</p>
+            <p>"PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony
+                Interactive Entertainment Inc.
+            <p>
+            <p>Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks
+                and/or registered trademarks of Epic Games. All other trademarks are the property of their respective
+                owners.</p>
+            <a href="https://www.hoyoverse.com/?utm_source=genshin&utm_medium=footer"><img
+                    src="../images/footer/mihoyo_logo.png" alt="pic"></a>
+            <p class="copyright">Copyright © COGNOSPHERE. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
