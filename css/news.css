@@ -1,0 +1,258 @@
+body {
+    background-color: rgb(240, 240, 240);
+  }
+  
+  /* ------------------------------------------------------------------------------------------------------------------------- */
+  /* |                                                   poster                                                              | */
+  /* ------------------------------------------------------------------------------------------------------------------------- */
+  
+  .container .poster {
+    width: 100%;
+    height: 700px;
+    background: url("../images/news/poster/posterbackground.jpg") no-repeat center/cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container .card {
+    display: block;
+    width: 420px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 5px;
+  
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  
+    position: relative;
+  
+    cursor: pointer;
+  
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+  }
+  
+  .container .card .imgBox {
+    width: 380px;
+    height: 190px;
+    margin: 5% 5% 0 5%;
+    overflow: hidden;
+  }
+  
+  .container .card .imgBox img {
+    width: 380px;
+    height: 190px;
+    object-fit: cover;
+    transition: 0.3s linear all;
+  }
+  
+  .container .card:hover .imgBox img {
+    transform: scale(1.2);
+    transition: 0.3s linear all;
+  }
+  
+  .container .card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5% 5% 0 5%;
+  }
+  
+  .container .card .abstract {
+    display: block;
+    margin: 5% 5% 0 5%;
+    font-size: 17px;
+  }
+  
+  .container .card .date::before {
+    content: "2023年";
+  }
+  
+  .container .card .date {
+    font-weight: normal;
+    font-size: 17px;
+    position: absolute;
+    bottom: 0;
+    margin: 0% 5% 5% 5%;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .container .card .type {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0% 5% 5% 5%;
+    color: #9c3;
+  }
+  
+  
+  /* ------------------------------------------------------------------------------------------------------------------------- */
+  /* |                                                   newsBox                                                             | */
+  /* ------------------------------------------------------------------------------------------------------------------------- */
+  
+  .newsBox {
+    width: 1280px;
+    margin: auto;
+    padding-bottom: 208px;
+  }
+  
+  .classificationList {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .newsBoxBtn {
+    min-width: 155px;
+    height: 36px;
+    margin-top: 38px;
+    margin-right: 20px;
+  
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+  
+    background-color: rgba(57,59,64,0.18);
+    color: #393b40;
+    border-color: transparent;
+    border-radius: 4px;
+    transition: 0.2s all ease;
+    cursor: pointer;
+  }
+  
+  .newsBoxBtn:hover {
+    background-color: #393b40;
+    color: #f4d8a8;
+    transition: 0.2s all ease;
+  }
+  
+  .activeBtn {
+    background-color: #393b40;
+    color: #f4d8a8;
+  }
+  
+  .articleList{
+    margin-top: 38px;
+    list-style: none;
+  }
+  
+  .article {
+    min-height: 170px;
+    margin-top: 10px;
+    background-color: #fafafa;
+    border: 3px rgba(50, 50, 50, 0) solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.2s all linear;
+    cursor: pointer;
+  }
+  
+  .article a {
+    text-decoration: none;
+    color: #000;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .article:hover {
+    border: 3px rgba(50, 50, 50, 0.2) solid;
+    transition: 0.2s all ease;
+  }
+  
+  .articleImg {
+    width: 265px;
+    height: 140px;
+    margin: 20px;
+    object-fit: cover;
+  }
+  
+  .articleText {
+    margin-top: 20px;
+  }
+  
+  .articleText .articleTitle {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  
+  .articleText .articleAbstract {
+    display: block;
+    margin-top: 11px;
+    font-size: 16px;
+    color: #7d7d7d;
+  }
+  
+  .articleText .articleMeta {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  
+  .articleText .articleMeta .articleDate {
+    margin-right: 56px;
+    color: #999;
+  }
+  
+  .articleInfo {
+    color: #ffc000;
+  }
+  
+  .articleActivity {
+    color: #9c3;
+  }
+  
+  .articleAnnouncement {
+    color: #bc80ff;
+  }
+  
+  .load {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #393b40;
+    border-color: transparent;
+    border-radius: 4px;
+    opacity: 0.8;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2 opacity linear;
+    margin-top: 40px;
+  }
+  
+  .load:hover {
+    opacity: 0.7;
+    transition: 0.2 opacity linear;
+  }
+  
+  
+  .topBtn {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 54px;
+    bottom: 108px;
+    background-color: #fff;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s all linear;
+    opacity: 0;
+  }
+  
+  .topBtn img {
+    width: 22px;
+    height: 24px;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+  
+  .topBtn:hover {
+    background-color: #f8f8f8;
+  }
